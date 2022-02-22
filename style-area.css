@@ -1,0 +1,161 @@
+/* #region reset */
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+} 
+/* #endregion reset */
+
+:root{
+    --primary-color: white;
+    --bg-color: #2A354A;
+}
+
+
+#img-main{
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    display: grid;
+    grid-auto-rows: 12rem;
+}
+
+.img1{
+
+    background-image:url(/imagens/Morning-Coffee.jpg);
+    background-size: 100% 100%;
+}
+.img2{
+    background-image:url(/imagens/meet-me.jfif);
+    background-size: 100% 100%;
+}
+.img3{
+    background-image:url(/imagens/2coffe.jfif);
+    background-size: 100% 100%;
+}
+.img4{ 
+    background-image:url(/imagens/2coffe.jfif);
+    background-size: 100% 100%;
+}
+.img5{
+    background-image:url(/imagens/cofee.jpg);
+    background-size: 100% 100%;
+}
+.img6{
+    background-image:url(/imagens/shop.jpg);
+    background-size: 100% 100%;
+}
+    
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #img-main{
+    height: 100vh;
+
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "img1 img2 img2 img3"
+    "img4 img2 img2 img3"
+    "img4 img5 img6 img6";
+
+}
+
+.img1{
+
+    grid-area: img1;
+}
+.img2{
+    grid-area: img2;
+}
+.img3{
+    grid-area: img3;
+}
+.img4{
+    grid-area: img4;
+}
+.img5{
+    grid-area: img5;  
+}
+.img6{
+    grid-area: img6;
+}
+.img:hover{
+  
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #ccc;
+  transform: scale(1.1);
+    }
+}

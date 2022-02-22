@@ -1,0 +1,136 @@
+/* #region reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+} 
+/* #endregion reset */
+:root{
+    --primary-color: white;
+    --bg-color: #2A354A;
+}
+
+.grid-container{
+    background-color: var(--bg-color);
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, auto);
+    /*grid-template-rows: repeat(2, auto);*/
+    grid-auto-rows: 300px;
+}
+
+
+.img:nth-child(2){
+   grid-column: span 2;
+   grid-row: span 2;
+}
+.img:nth-child(3){
+   
+    grid-row: span 2;
+ }
+
+ .img:nth-child(4){
+  
+    grid-row: span 2;
+ }
+ .img:nth-child(6){
+  
+    grid-column: span 2;
+ }
+ .img{
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+ }
+
+ .img1{
+     background-image:url(/imagens/Morning-Coffee.jpg);
+     background-size: 100% 100%;
+ }
+
+ .img2{
+    background-image:url(/imagens/meet-me.jfif);
+    background-size: 100% 100%;
+ }
+ .img3{
+    background-image:url(/imagens/2coffe.jfif);
+    background-size: 100% 100%;
+ }
+ .img4{
+    background-image:url(/imagens/cofee.jpg);
+    background-size: 100% 100%;
+ }
+ .img5{
+    background-image:url(/imagens/shop.jpg);
+    background-size: 100% 100%;
+ }
